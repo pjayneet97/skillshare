@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3307
--- Generation Time: Dec 29, 2018 at 10:23 PM
--- Server version: 5.6.42
--- PHP Version: 5.6.39
+-- Host: localhost
+-- Generation Time: Dec 30, 2018 at 11:04 PM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.3.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -100,16 +100,17 @@ CREATE TABLE `user` (
   `user_phone` varchar(11) NOT NULL,
   `user_password` varchar(25) NOT NULL,
   `user_profileimg` varchar(255) NOT NULL,
-  `user_city` varchar(20) NOT NULL
+  `user_city` varchar(20) NOT NULL,
+  `experience` int(5) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`user_id`, `user_name`, `user_email`, `user_phone`, `user_password`, `user_profileimg`, `user_city`) VALUES
-(1, 'jayneet porwal', 'porwaljayneet97@gmail.com', '8955018041', 'open@123', 'avatar.png', 'udaipur'),
-(2, 'lucky soni', 'luckysoni291298@gmail.com', '8875225170', 'open@456', 'avatar.png', 'khamnor');
+INSERT INTO `user` (`user_id`, `user_name`, `user_email`, `user_phone`, `user_password`, `user_profileimg`, `user_city`, `experience`) VALUES
+(1, 'jayneet porwal', 'porwaljayneet97@gmail.com', '8955018041', 'open@123', 'avatar.png', 'udaipur', 0),
+(2, 'lucky soni', 'luckysoni291298@gmail.com', '8875225170', 'open@456', 'avatar.png', 'khamnor', 2);
 
 -- --------------------------------------------------------
 
