@@ -1,5 +1,4 @@
 <?php
-   
 class User {
     var $user_id;
     var $conn;

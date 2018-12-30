@@ -1,10 +1,9 @@
 <?php
     include "includes/user.php";
-    $user=new User(1);
+    $user_id=$_GET['uid'];
+    $user=new User($user_id);
     $resume=$user->getResume();
- /* demo use :
     foreach($resume['skills'] as $skill){
        echo $skill['skill_name'];
    }
- */
 ?>
