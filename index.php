@@ -1,4 +1,12 @@
 <?php 
+    session_start(); 
+    if(!isset($_SESSION['user_id'])){
+        echo "<script>window.open('signin.html','_self')</script>";
+    }
+    else{
+    $name=$_SESSION['user_name']; 
+    $uid=$_SESSION['user_id']; 
+    echo $name.$uid;
     include "includes/functions.php";
     if(isset($_GET['key'])){
         $href="index.php?key=".$_GET['key']."&orderbyexp=";
@@ -32,13 +40,17 @@
     <a href="<?php echo $href.'desc'; ?>">desc</a>
     <a href="<?php echo $href.'asc'; ?>">asc</a>
 
-      
+    <a href="editprofile.php">edit profile</a>  
+    <a href="logout.php">logout</a>
 
-<?php        
+<?php      
+    
 if($users){
     foreach ($users as $user) {
     displayusercard($user);
     }
+}
+
 }
 ?>
     

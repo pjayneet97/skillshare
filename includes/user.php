@@ -169,7 +169,7 @@ class User {
         }
     }
     function delExperience($experience_id){
-        $sql = "DELETE FROM `work_experience` WHERE experiencr_id='$experiencr_id'";
+        $sql = "DELETE FROM `work_experience` WHERE experience_id='$experience_id'";
         $result = mysqli_query($this->conn,$sql);
         if ($result) {
             return true;

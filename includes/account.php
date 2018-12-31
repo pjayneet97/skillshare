@@ -1,11 +1,15 @@
 <?php
+    session_start();
     include "user.php";
-    $uid=1;
+    $uid=$_SESSION['user_id'];
     $user=new User($uid);
     if(isset($_POST['new']) && isset($_POST['current'])){
         $new=$_POST['new'];
         $current=$_POST['current'];
-        $user->changepassword($new,$current);
+        $status=$user->changepassword($new,$current);
+        if(!$status){
+        echo "<script>alert('wrong password')</script>";
+        }
         echo "<script>window.open('../editprofile.php','_self')</script>";
     }
     if(isset($_POST['skill_name'])){
@@ -35,6 +39,28 @@
         $graduation['subject']=$_POST['subject'];
         $graduation['year_of_completion']=$_POST['year_of_completion'];
         $user->addGraduation($graduation);
+        echo "<script>window.open('../editprofile.php','_self')</script>";
+    }
+
+    if(isset($_GET['skill_id'])){
+        $delid=$_GET['skill_id'];
+        $user->delSkill($delid);
+        echo "hello";
+        echo "<script>window.open('../editprofile.php','_self')</script>";
+    }
+    if(isset($_GET['experience_id'])){
+        $delid=$_GET['experience_id'];
+        $user->delExperience($delid);
+        echo "<script>window.open('../editprofile.php','_self')</script>";
+    }
+    if(isset($_GET['graduation_id'])){
+        $delid=$_GET['graduation_id'];
+        $user->delGraduation($delid);
+        echo "<script>window.open('../editprofile.php','_self')</script>";
+    }
+    if(isset($_GET['school_id'])){
+        $delid=$_GET['school_id'];
+        $user->delSchool($delid);
         echo "<script>window.open('../editprofile.php','_self')</script>";
     }
     
