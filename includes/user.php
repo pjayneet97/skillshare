@@ -88,33 +88,113 @@ class User {
     }
 
     function changepassword($new,$current){
-        // write code here
+        $query1="SELECT * FROM `user` WHERE `user_id`='$this->user_id' and `user_password`='$current'";
+        $run=mysqli_query($this->conn,$query1);
+        $num=mysqli_num_rows($run);
+        if($num==1)
+        {   $query2="UPDATE `user` SET `user_password`='$new' WHERE user_id='$this->user_id'";
+            $run=mysqli_query($this->conn,$query2);
+            if($run)
+            {
+                return true; 
+            }
+            else{
+                return false;
+            }
+        }
+        else{
+            return false;
+        }
     }
 
-    function addSkill($skill){
-        // code to add skill
+    function addSkill($array){
+        $skill_name=$array['skill_name'];
+        $skill_level=$array['skill_level'];
+        $sql = "INSERT INTO `skills`(`user_id`, `skill_name`, `skill_level`) VALUES ('$this->user_id','$skill_name','$skill_level')";
+        $result = mysqli_query($this->conn,$sql);
+        if ($result) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    function addExperience($exp){
-        // code to add exp
+    function addExperience($array){
+        $organisation=$array['organisation'];
+        $position=$array['position'];
+        $duration=$array['duration'];
+        $description=$array['description'];
+
+        $sql = "INSERT INTO `work_experience`(`user_id`, `organisation`, `position`, `duration`, `description`) VALUES ('$this->user_id','$organisation','$position','$duration','$description')";
+        $result = mysqli_query($this->conn,$sql);
+        if ($result) {
+            return true;
+        } else {
+            return false;
+        }
     }
-    function addSchool($school){
-        // code to add school
+    function addSchool($array){
+        $school_name=$array['school_name'];
+        $school_board=$array['school_board'];
+        $school_percentage=$array['school_percentage'];
+
+        $sql = "INSERT INTO `school`(`user_id`, `school_name`, `school_board`, `school_percentage`) VALUES ('$this->user_id','$school_name','$school_board','$school_percentage')";
+        $result = mysqli_query($this->conn,$sql);
+        if ($result) {
+            return true;
+        } else {
+            return false;
+        }
     }
-    function addGraduation($graduation){
-        // code to add graduation
+    function addGraduation($array){
+        $college_name=$array['college_name'];
+        $degree_name=$array['degree_name'];
+        $subject=$array['subject'];
+        $year_of_completion=$array['year_of_completion'];
+
+        $sql = "INSERT INTO `work_experience`(`user_id`, `college_name`, `degree_name`, `subject`, `year_of_completion`) VALUES ('$this->user_id','$college_name','$degree_name','$subject','$year_of_completion')";
+        $result = mysqli_query($this->conn,$sql);
+        if ($result) {
+            return true;
+        } else {
+            return false;
+        }
     }
     function delSkill($skill_id){
-        // code to add skill
+        $sql = "DELETE FROM `skills` WHERE skill_id='$skill_id'";
+        $result = mysqli_query($this->conn,$sql);
+        if ($result) {
+            return true;
+        } else {
+            return false;
+        }
     }
     function delExperience($experience_id){
-        // code to add skill
+        $sql = "DELETE FROM `work_experience` WHERE experiencr_id='$experiencr_id'";
+        $result = mysqli_query($this->conn,$sql);
+        if ($result) {
+            return true;
+        } else {
+            return false;
+        }
     }
     function delSchool($school_id){
-        // code to add skill
+        $sql = "DELETE FROM `school` WHERE school_id='$school_id'";
+        $result = mysqli_query($this->conn,$sql);
+        if ($result) {
+            return true;
+        } else {
+            return false;
+        }
     }
-    function delgraduation($skill_id){
-        // code to add skill
+    function delgraduation($graduation_id){
+        $sql = "DELETE FROM `graduation` WHERE graduation_id='$graduation_id'";
+        $result = mysqli_query($this->conn,$sql);
+        if ($result) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 
