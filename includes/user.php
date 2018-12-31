@@ -151,8 +151,7 @@ class User {
         $degree_name=$array['degree_name'];
         $subject=$array['subject'];
         $year_of_completion=$array['year_of_completion'];
-
-        $sql = "INSERT INTO `work_experience`(`user_id`, `college_name`, `degree_name`, `subject`, `year_of_completion`) VALUES ('$this->user_id','$college_name','$degree_name','$subject','$year_of_completion')";
+        $sql = "INSERT INTO `graduation`(`user_id`, `college_name`, `degree_name`, `subject`, `year_of_completion`) VALUES ('$this->user_id','$college_name','$degree_name','$subject','$year_of_completion')";
         $result = mysqli_query($this->conn,$sql);
         if ($result) {
             return true;
