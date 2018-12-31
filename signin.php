@@ -13,7 +13,7 @@
         }
         else{
             $row=mysqli_fetch_array($run);            
-            $name=$row['user_name'];  
+            $name=$row['user_fname'];  
             $uid=$row['user_id'];          
             $_SESSION['user_name']=$name;
             $_SESSION['user_id']=$uid;                     

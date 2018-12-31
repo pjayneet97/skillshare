@@ -4,9 +4,9 @@
         echo "<script>window.open('signin.html','_self')</script>";
     }
     else{
-    $name=$_SESSION['user_name']; 
+    $fname=$_SESSION['user_name']; 
     $uid=$_SESSION['user_id']; 
-    echo $name.$uid;
+    echo $fname.$uid;
     include "includes/functions.php";
     if(isset($_GET['key'])){
         $href="index.php?key=".$_GET['key']."&orderbyexp=";

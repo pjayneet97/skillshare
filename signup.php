@@ -15,12 +15,13 @@ while($row=mysqli_fetch_array($SELECT_query_result)){
 }
 $password=$_POST['password'];
 /* function to encrypt password will come here */
-$name=$_POST['name'];
+$fname=$_POST['fname'];
+$lname=$_POST['lname'];
 $phone=$_POST['phone'];
 $city=$_POST['city'];
-$query="INSERT INTO `user` (`user_name`, `user_email`, `user_phone`, `user_password`, `user_city`) VALUES ('$name', '$email', '$phone', '$password', '$city')";
+$query="INSERT INTO `user` (`user_fname`, `user_lname`, `user_email`, `user_phone`, `user_password`, `user_city`) VALUES ('$fname', '$lname', '$email', '$phone', '$password', '$city')";
 if(mysqli_query($conn,$query)){                         
-        $_SESSION['user_name']="$name";
+        $_SESSION['user_name']="$fname";
         $query2="select * FROM user where user_email='$email'";
         $run=mysqli_query($conn,$query2);
         while($row=mysqli_fetch_array($run)){
