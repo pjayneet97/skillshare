@@ -1,7 +1,5 @@
 <?php require "includes/db.php"; 
       session_start();
-?>
-<?php
     if(isset($_POST['email'])){        
         $email=$_POST['email'];
         $password=$_POST['password'];

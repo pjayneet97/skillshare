@@ -62,6 +62,5 @@
         $delid=$_GET['school_id'];
         $user->delSchool($delid);
         echo "<script>window.open('../editprofile.php','_self')</script>";
-    }
-    
+    }    
 ?>
