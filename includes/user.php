@@ -86,5 +86,37 @@ class User {
         return $resume;
         // demo to use resume array : echo $resume['skills'][0]['skill_name'];
     }
+
+    function changepassword($new,$current){
+        // write code here
+    }
+
+    function addSkill($skill){
+        // code to add skill
+    }
+
+    function addExperience($exp){
+        // code to add exp
+    }
+    function addSchool($school){
+        // code to add school
+    }
+    function addGraduation($graduation){
+        // code to add graduation
+    }
+    function delSkill($skill_id){
+        // code to add skill
+    }
+    function delExperience($experience_id){
+        // code to add skill
+    }
+    function delSchool($school_id){
+        // code to add skill
+    }
+    function delgraduation($skill_id){
+        // code to add skill
+    }
+
+
 }
 ?>

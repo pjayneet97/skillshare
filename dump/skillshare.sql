@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 30, 2018 at 11:04 PM
+-- Generation Time: Dec 31, 2018 at 08:19 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `graduation` (
+  `graduation_id` int(10) NOT NULL,
   `user_id` int(10) NOT NULL,
   `college_name` varchar(255) NOT NULL,
   `degree_name` varchar(20) NOT NULL,
@@ -40,9 +41,9 @@ CREATE TABLE `graduation` (
 -- Dumping data for table `graduation`
 --
 
-INSERT INTO `graduation` (`user_id`, `college_name`, `degree_name`, `subject`, `year_of_completion`) VALUES
-(1, 'college of technology and engineering', 'b.tech', 'computer science', '2020'),
-(2, 'pacific univercity', 'b.tech', 'mechanical', '2021');
+INSERT INTO `graduation` (`graduation_id`, `user_id`, `college_name`, `degree_name`, `subject`, `year_of_completion`) VALUES
+(1, 1, 'college of technology and engineering', 'b.tech', 'computer science', '2020'),
+(2, 2, 'pacific univercity', 'b.tech', 'mechanical', '2021');
 
 -- --------------------------------------------------------
 
@@ -51,6 +52,7 @@ INSERT INTO `graduation` (`user_id`, `college_name`, `degree_name`, `subject`, `
 --
 
 CREATE TABLE `school` (
+  `school_id` int(10) NOT NULL,
   `user_id` int(10) NOT NULL,
   `school_name` varchar(255) NOT NULL,
   `school_board` varchar(255) NOT NULL,
@@ -61,9 +63,9 @@ CREATE TABLE `school` (
 -- Dumping data for table `school`
 --
 
-INSERT INTO `school` (`user_id`, `school_name`, `school_board`, `school_percentage`) VALUES
-(1, 'st. gregorios senior sec. school', 'CBSE', '93.4'),
-(2, 'central academy', 'RBSE', '83');
+INSERT INTO `school` (`school_id`, `user_id`, `school_name`, `school_board`, `school_percentage`) VALUES
+(1, 1, 'st. gregorios senior sec. school', 'CBSE', '93.4'),
+(2, 2, 'central academy', 'RBSE', '83');
 
 -- --------------------------------------------------------
 
@@ -72,6 +74,7 @@ INSERT INTO `school` (`user_id`, `school_name`, `school_board`, `school_percenta
 --
 
 CREATE TABLE `skills` (
+  `skill_id` int(10) NOT NULL,
   `user_id` int(10) NOT NULL,
   `skill_name` varchar(20) NOT NULL,
   `skill_level` varchar(20) NOT NULL
@@ -81,11 +84,11 @@ CREATE TABLE `skills` (
 -- Dumping data for table `skills`
 --
 
-INSERT INTO `skills` (`user_id`, `skill_name`, `skill_level`) VALUES
-(1, 'PHP', 'BEGINNER'),
-(1, 'JAVA', 'ADVANCE'),
-(2, 'HTML', 'INTERMEDIATE'),
-(2, 'DIGITAL MARKETING', 'BEGINNER');
+INSERT INTO `skills` (`skill_id`, `user_id`, `skill_name`, `skill_level`) VALUES
+(1, 1, 'PHP', 'BEGINNER'),
+(2, 1, 'JAVA', 'ADVANCE'),
+(3, 2, 'HTML', 'INTERMEDIATE'),
+(4, 2, 'DIGITAL MARKETING', 'BEGINNER');
 
 -- --------------------------------------------------------
 
@@ -119,6 +122,7 @@ INSERT INTO `user` (`user_id`, `user_name`, `user_email`, `user_phone`, `user_pa
 --
 
 CREATE TABLE `work_experience` (
+  `experience_id` int(10) NOT NULL,
   `user_id` int(10) NOT NULL,
   `organisation` text NOT NULL,
   `position` text NOT NULL,
@@ -130,13 +134,31 @@ CREATE TABLE `work_experience` (
 -- Dumping data for table `work_experience`
 --
 
-INSERT INTO `work_experience` (`user_id`, `organisation`, `position`, `duration`, `description`) VALUES
-(1, 'Raj Culture Tours and travel', 'web Developer', '6', 'I managed their Website and marketing'),
-(2, 'orurentals', 'degital marketing head', '3', 'www.orurentals.com');
+INSERT INTO `work_experience` (`experience_id`, `user_id`, `organisation`, `position`, `duration`, `description`) VALUES
+(1, 1, 'Raj Culture Tours and travel', 'web Developer', '6', 'I managed their Website and marketing'),
+(2, 2, 'orurentals', 'degital marketing head', '3', 'www.orurentals.com');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `graduation`
+--
+ALTER TABLE `graduation`
+  ADD PRIMARY KEY (`graduation_id`);
+
+--
+-- Indexes for table `school`
+--
+ALTER TABLE `school`
+  ADD PRIMARY KEY (`school_id`);
+
+--
+-- Indexes for table `skills`
+--
+ALTER TABLE `skills`
+  ADD PRIMARY KEY (`skill_id`);
 
 --
 -- Indexes for table `user`
@@ -145,14 +167,44 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`user_id`);
 
 --
+-- Indexes for table `work_experience`
+--
+ALTER TABLE `work_experience`
+  ADD PRIMARY KEY (`experience_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `graduation`
+--
+ALTER TABLE `graduation`
+  MODIFY `graduation_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `school`
+--
+ALTER TABLE `school`
+  MODIFY `school_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `skills`
+--
+ALTER TABLE `skills`
+  MODIFY `skill_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `work_experience`
+--
+ALTER TABLE `work_experience`
+  MODIFY `experience_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
