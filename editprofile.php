@@ -33,33 +33,33 @@
 ?>
 
 <form action="includes/account.php" method='post'>
-    <input type="text" name="new" required>
-    <input type="text" name="current" required>
+    <input type="password" name="new" placeholder="new password" required>
+    <input type="password" name="current" placeholder="current password" required>
     <button type="submit">Change password</button>
 </form>
 <form action="includes/account.php" method="post">
-    <input type="text" name="skill_name">
-    <input type="text" name="skill_level">
+    <input type="text" name="skill_name" placeholder="skill name" required>
+    <input type="text" name="skill_level" placeholder="level" required>
     <button type="submit">Add Skill</button>
 </form>
 <form action="includes/account.php" method="post">
-    <input type="text" name="school_name">
-    <input type="text" name="school_board">
-    <input type="text" name="school_percentage">
+    <input type="text" name="school_name" placeholder="school name" required>
+    <input type="text" name="school_board" placeholder="board" required>
+    <input type="text" name="school_percentage" placeholder="percentage" required>
     <button type="submit">Save</button>
 </form>
 <form action="includes/account.php" method="post">
-    <input type="text" name="college_name">
-    <input type="text" name="degree_name">
-    <input type="text" name="subject">
-    <input type="text" name="year_of_completion">
+    <input type="text" name="college_name" placeholder="college name" required>
+    <input type="text" name="degree_name" placeholder="degree" required>
+    <input type="text" name="subject" placeholder="subject of study" required>
+    <input type="text" name="year_of_completion" placeholder="year of completion" required>
     <button type="submit">Save</button>
 </form>
 <form action="includes/account.php" method="post">
-    <input type="text" name="organisation">
-    <input type="text" name="position">
-    <input type="text" name="duration">
-    <input type="text" name="description">
+    <input type="text" name="organisation" placeholder="organisation name" required>
+    <input type="text" name="position" placeholder="position" required>
+    <input type="text" name="duration" placeholder="duration" required>
+    <input type="text" name="description" placeholder="description" required>
     <button type="submit">Save</button>
 </form>
 
