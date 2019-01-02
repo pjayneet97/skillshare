@@ -197,7 +197,7 @@ class User {
     }
 
     function updateimage($img){
-        $sql = "update user set user_profileimg='$img' where user_id=10";
+        $sql = "update user set user_profileimg='$img' where user_id='$this->user_id'";
         $result = mysqli_query($this->conn,$sql);
         if ($result) {
             return true;
