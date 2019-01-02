@@ -81,7 +81,7 @@ body {
                   </div>
                     <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" style='background-color: rgb(4, 84, 138)'  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                         <?php echo $fname; ?>
+                         <?php echo $fname;?>
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                               <a class="dropdown-item" href="profile.php">View Resume</a>
@@ -97,7 +97,7 @@ body {
   <div class="row mx-auto">
   
     <div class="col-lg-3 col-sm-auto col-md-auto">
-       <div class="shadow-sm card mt-2">
+       <div class="shadow card mt-2">
          <div class="card-body">
            <h5 class="card-title">Top Searches</h5>
            <p class="card-text">Content</p>
