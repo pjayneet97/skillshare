@@ -64,7 +64,7 @@ body {
 
 
 </style>
-    <title>Hello, world!</title>
+    <title>SkillShare</title>
   </head>
   <body>
         <header>
@@ -80,7 +80,7 @@ body {
                     </form>
                   </div>
                     <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" style='background-color: rgb(4, 84, 138)'  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                          <?php echo $fname;?>
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -110,13 +110,13 @@ body {
                <div class="card-body">
                   <div class="row mx-auto ">
                       
-                      <div class="col-lg-8 col-sm-10 col-md-10">
+                      <div class="col-lg-7 col-sm-10 col-md-10">
                          Resume
                         </div> 
 
-                        <div class="col-lg-4 col-sm-2 col-md-2">
+                        <div class="col-lg-5 col-sm-2 col-md-2">
                             <div class="btn-group">
-                                <button class="btn btn-info btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <button class="btn btn-outline-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                  Sort by experience
                                 </button>
                                <div class="dropdown-menu">
@@ -124,7 +124,9 @@ body {
                                    <a class="dropdown-item" href="<?php echo $href.'desc'; ?>">high to low</a>
                                </div>
                             </div>
+                            <a style="text-decoration:none" href="index.php"><button class="btn btn-outline-dark">Reset filters</button></a>
                        </div>
+
 
                    </div>
                  </div>
