@@ -39,10 +39,10 @@
                   <div class="card-body">
                       <h5 class="card-title text-center font-weight-bold font-weight-italic"> Education details:</h5><hr>
              <div class="row mx-auto" >
-                <div class="col-lg-10">
+                <div class="col-lg-10 col-sm-auto col-md-auto">
                    <i class="material-icons" style="color:rgb(5, 126, 116)">edit</i> <span class=" font-weight-bold"> Graduation details:</span>
                 </div>  
-            <div class="col-lg-2 text-right">
+            <div class="col-lg-2 col-sm-auto col-md-auto text-right">
                 <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#addgraduation">Add </button>
             </div>       
           </div> <hr>   
@@ -58,10 +58,10 @@
                   </div>
                     <hr>
                     <div class="row mx-auto" >
-                            <div class="col-lg-10">
+                            <div class="col-lg-10 col-sm-auto col-md-auto">
                                <i class="material-icons" style="color:rgb(5, 126, 116)">edit</i> <span class=" font-weight-bold"> Higher Secondary details:</span>
                             </div>  
-                        <div class="col-lg-2 text-right">
+                        <div class="col-lg-2 col-sm-auto col-md-auto text-right">
                             <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#addschool">Add </button>
                         </div>       
                       </div> <hr>   
@@ -84,10 +84,10 @@
               <div class="card mt-2 shadow p">
                   <div class="card-body">
                    <div class="row" >
-                       <div class="col-lg-10">
+                       <div class="col-lg-10 col-sm-10 col-md-10">
                             <h5 class="card-title font-weight-bold">Work Experience : </h5>
                        </div>  
-                       <div class="col-lg-2 text-right">
+                       <div class="col-lg-2 col-sm-2 col-md-2 text-right">
                             <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#addExperience">Add experience</button>
                        </div>                   
                      </div> 
@@ -133,10 +133,10 @@
                 <div class="card mt-2 shadow p">
                     <div class="card-body">
                             <div class="row" >
-                                    <div class="col-lg-10">
+                                    <div class="col-lg-10 col-sm-10 col-sm-2">
                                          <h5 class="card-title font-weight-bold">Skills : </h5>
                                     </div>  
-                                    <div class="col-lg-2 text-right">
+                                    <div class="col-lg-2 col-sm-2 col-md-2 text-right">
                                        <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#addSkill">Add skill</button>
                                     </div>                   
                                   </div>  
@@ -172,7 +172,7 @@
                         </p>
                     </div>      
                 </div>
-
+              <br>  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#password">Change Password</button>
           </div>
       </div>
 </div>
@@ -191,18 +191,17 @@
             </div>
             <form  action="includes/account.php" method="post">
             <div class="modal-body">
-
      
-            <input type="text" name="position" class="form-control" id="validationTooltip01" placeholder="Position"  required>
+            <input type="text" name="position" class="form-control mt-2" id="validationTooltip01" placeholder="Position"  required>
   
      
-            <input type="text" name="organisation" class="form-control" id="validationTooltip01" placeholder="organisation"  required>
+            <input type="text" name="organisation" class="form-control mt-2" id="validationTooltip01" placeholder="organisation"  required>
   
      
-            <input type="text" name="duration" class="form-control" id="validationTooltip01" placeholder="duration(in years)"  required>      
+            <input type="text" name="duration" class="form-control mt-2" id="validationTooltip01" placeholder="duration(in years)"  required>      
   
      
-            <input type="text" name="description" class="form-control" id="validationTooltip01" placeholder="Description"  required>
+            <input type="text" name="description" class="form-control mt-2" id="validationTooltip01" placeholder="Description"  required>
 
             </div>
 
@@ -230,10 +229,7 @@
                 <div class="modal-body ">
                     <form  action="includes/account.php" method="post">
         
-                <input type="text" name="skill_name" class="form-control" id="validationTooltip01" placeholder="skill name"  required>
-       
-        </form>
-         <form class="form-inline" action="includes/account.php" method="post">
+                <input type="text" name="skill_name" class="form-control"  id="validationTooltip01" placeholder="skill name"  required>
                 <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Choose level :</label>
                 <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
                   <option selected>Choose...</option>
@@ -263,18 +259,18 @@
                   </button>
                 </div>
                 <div class="modal-body ">
-                    <form  action="includes/account.php" method="post">
+                    <form class="form-control" action="includes/account.php" method="post">
         
-                <input type="text"  name="degree_name" class="form-control" id="validationTooltip01" placeholder="Degree"  required>
+                <input type="text"  name="degree_name"  class="form-control mt-2" id="validationTooltip01" placeholder="Degree"  required>
   
       
-                <input type="text"  name="subject" class="form-control" id="validationTooltip01" placeholder="Subject"  required>
+                <input type="text"  name="subject"  class="form-control mt-2" id="validationTooltip01" placeholder="Subject"  required>
        
         
-                <input type="text"  name="year_of_completion" class="form-control" id="validationTooltip01" placeholder="Year of completion"  required>      
+                <input type="text"  name="year_of_completion" class="form-control mt-2" id="validationTooltip01" placeholder="Year of completion"  required>      
        
         
-                <input type="text"  name="college_name" class="form-control" id="validationTooltip01" placeholder="College name"  required>
+                <input type="text"  name="college_name" class="form-control mt-2" id="validationTooltip01" placeholder="College name"  required>
        
      </form>
                 </div>
@@ -298,21 +294,21 @@
                   </button>
                 </div>
                 <div class="modal-body ">
-                    <form  action="includes/account.php" method="post">
+                    <form class="form-control" action="includes/account.php" method="post">
         
-                <input type="text" name="" class="form-control" id="validationTooltip01" placeholder="Subject"  required>
+                <input type="text" name=""  class="form-control mt-2" id="validationTooltip01" placeholder="Subject"  required>
          
         
-                <input type="text" name="school_name" class="form-control" id="validationTooltip01" placeholder="School"  required>
+                <input type="text" name="school_name" class="form-control mt-2" id="validationTooltip01" placeholder="School"  required>
          
         
-                <input type="text" name="school_year" class="form-control" id="validationTooltip01" placeholder="Year of passing"  required>      
+                <input type="text" name="school_year" class="form-control mt-2" id="validationTooltip01" placeholder="Year of passing"  required>      
          
         
-                <input type="text" name="school_board" class="form-control" id="validationTooltip01" placeholder="Board"  required>
+                <input type="text" name="school_board" class="form-control mt-2"id="validationTooltip01" placeholder="Board"  required>
          
         
-            <input type="text" name="school_percentage" class="form-control" id="validationTooltip01" placeholder="Percentage"  required>
+            <input type="text" name="school_percentage" class="form-control mt-2"  id="validationTooltip01" placeholder="Percentage"  required>
      
         </form>
                 </div>
@@ -325,6 +321,32 @@
           </div>
 
 
+       <!-- Modal for password -->
+       <div class="modal fade" id="password" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Add Skill</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form action="includes/account.php" method="post">
+            <div class="modal-body ">
+               
+    
+            <input type="password" name="skill_name" class="form-control mt-2" id="validationTooltip01" placeholder="old password"  required>
+            <input type="password" name="skill_name" class="form-control mt-2" id="validationTooltip01" placeholder="new password"  required>
+          
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Save changes</button>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
