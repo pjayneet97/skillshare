@@ -60,7 +60,7 @@ class User {
         }
     }
     function getpersonal(){
-        $sql = "select user_fname,user_lname,user_email,user_phone,user_profileimg,user_city from user where user_id='$this->user_id'";
+        $sql = "select user_fname,user_lname,user_email,user_phone,user_profileimg,user_city,experience from user where user_id='$this->user_id'";
         $result = mysqli_query($this->conn,$sql);
         $array=null;
         if ($result) {

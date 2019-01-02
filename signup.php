@@ -19,7 +19,8 @@ $fname=$_POST['fname'];
 $lname=$_POST['lname'];
 $phone=$_POST['phone'];
 $city=$_POST['city'];
-$query="INSERT INTO `user` (`user_fname`, `user_lname`, `user_email`, `user_phone`, `user_password`, `user_city`) VALUES ('$fname', '$lname', '$email', '$phone', '$password', '$city')";
+$experience=$_POST['experience'];
+$query="INSERT INTO `user` (`user_fname`, `user_lname`, `user_email`, `user_phone`, `user_password`, `user_city`, `experience`) VALUES ('$fname', '$lname', '$email', '$phone', '$password', '$city', '$experience')";
 if(mysqli_query($conn,$query)){                         
         $_SESSION['user_name']="$fname";
         $query2="select * FROM user where user_email='$email'";
