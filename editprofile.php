@@ -62,6 +62,23 @@ body {
   background-color: whitesmoke;
 }
 
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
 
 
 </style>
@@ -116,8 +133,18 @@ body {
                         foreach($resume['personal'] as $personal){
                             echo "              <div class='card mt-2 shadow p' >
                             <div class='card-body' style='text-align:center'>
-                                 <div>  <img src='assets/profileimages/".$personal['user_profileimg']."'  class='rounded-circle' alt='Forest' width='150px' height='150px'>
-                                  </div>   <hr>              
+                                 <div>  <img src='assets/profileimages/".$personal['user_profileimg']."'  class='rounded-circle' alt='Forest' width='200px' height='200px'>
+                                  </div>
+                                  <form action='includes/account.php' method='post' enctype='multipart/form-data'>
+                                        
+                                        <div class='fileUpload btn btn-sm btn-primary'>
+                                        <span>Upload</span>
+                                        <input class='upload' type='file' name='fileToUpload' id='uploadBtn'>
+                                        </div>
+                                        
+                                        <input class='btn btn-primary btn-sm' type='submit' value='change' name='submitfile'>
+                                  </form>
+                                  <hr>              
                                  <div class='row mx-auto'>
                                      <i class='material-icons' style='color:rgb(5, 126, 116)'>account_box </i>   <span class='mx-auto font-weight-bold'>".$personal['user_fname']." ".$personal['user_fname']." </span>
                                  </div><hr>

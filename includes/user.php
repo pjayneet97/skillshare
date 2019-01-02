@@ -196,6 +196,16 @@ class User {
         }
     }
 
+    function updateimage($img){
+        $sql = "update user set user_profileimg='$img' where user_id=10";
+        $result = mysqli_query($this->conn,$sql);
+        if ($result) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 
 }
 ?>
