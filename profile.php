@@ -119,28 +119,29 @@ body {
                         <?php 
                             if($resume['graduation']){
                                 foreach($resume['graduation'] as $graduation){
-                                    echo "                        <div> <p> <span class='font-weight-bold'> Degree:</span> <span> ".$graduation['degree_name']." <span> ".$graduation['subject']." </span> </span></p>
+                                    echo "<div> <p> <span class='font-weight-bold'> Degree:</span> <span> ".$graduation['degree_name']." <span> ".$graduation['subject']." </span> </span></p>
                                     <p> <span class='font-weight-bold'> College : </span><span>".$graduation['college_name']."</span> </p>
                                     <p> <span class='font-weight-bold'> Year of Completion : </span> <span>".$graduation['year_of_completion']."</span></p> </div>
-                                </div>";
+                                    ";
                                 }
                             }
                         ?>
+                        </div>
                         <hr>
                     <div class="row mx-auto">
                        <div> <i class="material-icons" style="color:rgb(5, 126, 116)">edit</i> <span class=" font-weight-bold"> Higher secondary details:</span> </div>
                             <?php 
                                 if($resume['school']){
                                     foreach($resume['school'] as $school){
-                                        echo "                      <hr> <hr>  <div><p> <span class='font-weight-bold'> Subject : </span> <span>PCM</span> </p>
+                                        echo "<hr> <hr><div><p> <span class='font-weight-bold'> Subject : </span> <span>PCM</span> </p>
                                         <p> <span class='font-weight-bold'>School: </span><span>".$school['school_name']." </span></p>
                                         <p> <span class='font-weight-bold'>Year of Passing : </span> <span>2018</span></p> 
                                         <p> <span class='font-weight-bold'> Percentage : </span> <span> ".$school['school_percentage']." %</span></p> 
-                                        <p> <span class='font-weight-bold'>Board : </span> <span> ".$school['school_board']."</span></p> ";
+                                        <p> <span class='font-weight-bold'>Board : </span> <span> ".$school['school_board']."</span></p></div> ";
                                     }
                                 }
                             ?>
-                    </div>
+                    
                     </div><hr>
                   </div>
               </div>
