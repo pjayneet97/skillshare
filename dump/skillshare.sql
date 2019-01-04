@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 31, 2018 at 06:18 PM
+-- Generation Time: Jan 04, 2019 at 07:02 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -42,7 +42,7 @@ CREATE TABLE `graduation` (
 --
 
 INSERT INTO `graduation` (`graduation_id`, `user_id`, `college_name`, `degree_name`, `subject`, `year_of_completion`) VALUES
-(5, 5, 'ctae', 'b.tech', 'computer science', '2020');
+(1, 5, 'ctae', 'b tech', 'computer science', '2020');
 
 -- --------------------------------------------------------
 
@@ -63,7 +63,30 @@ CREATE TABLE `school` (
 --
 
 INSERT INTO `school` (`school_id`, `user_id`, `school_name`, `school_board`, `school_percentage`) VALUES
-(5, 5, 'st gregorios senior sec school', 'cbse', '93.4');
+(8, 8, 'hbgjd', 'bjbfgkj', 'gfkjq');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `searchs`
+--
+
+CREATE TABLE `searchs` (
+  `key_id` int(10) NOT NULL,
+  `key_name` varchar(255) NOT NULL,
+  `count` int(255) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `searchs`
+--
+
+INSERT INTO `searchs` (`key_id`, `key_name`, `count`) VALUES
+(6, 'php', 4),
+(7, 'java', 2),
+(8, 'angular', 1),
+(9, 'orurentals', 1),
+(10, 'microsoft', 3);
 
 -- --------------------------------------------------------
 
@@ -83,8 +106,12 @@ CREATE TABLE `skills` (
 --
 
 INSERT INTO `skills` (`skill_id`, `user_id`, `skill_name`, `skill_level`) VALUES
-(20, 5, 'PHP', 'advance'),
-(21, 5, 'ANGULAR6', 'INTERNEDIATE');
+(22, 6, 'bfhd', 'bhjb'),
+(23, 7, 'java', 'java'),
+(24, 6, 'php', 'adv'),
+(29, 5, 'bfd', 'Beginner'),
+(30, 5, 'open', ''),
+(31, 9, 'java', 'Beginner');
 
 -- --------------------------------------------------------
 
@@ -109,7 +136,14 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `user_fname`, `user_lname`, `user_email`, `user_phone`, `user_password`, `user_profileimg`, `user_city`, `experience`) VALUES
-(5, 'jayneet', 'porwal', 'porwaljayneet97@gmail.com', '8955018041', 'open@123', 'avatar.png', 'udaipur', 0);
+(5, 'jayneet', 'porwal', 'porwaljayneet97@gmail.com', '8955018041', 'open@123', 'Screenshot from 2018-12-07 17-42-21.png', 'udaipur', 0),
+(6, 'jp', 'porwal', 'po@gmail.com', '8955018041', 'open', 'avatar.png', 'udaipur', 1),
+(7, 'jay', 'por', 'abc@gmail.com', '8888888888', 'open', 'avatar.png', 'udr', 0),
+(8, 'ehjb', 'bhjb', 'porwaljayneet97@gmail.comm', 'vdbj', 'jhbvfjd', 'avatar.png', 'bhjbfj', 0),
+(9, 'bfeb', 'njknk', 'sv@Vhgv.com', 'njknkjn', 'njknkj', 'avatar.png', 'jnjkn', 0),
+(10, 'cjnd', 'bhjbjhb', 'a@a.com', 'bjhbjh', '1234', 'Screenshot from 2018-12-07 17-43-56.png', 'bjhbjh', 10),
+(11, 'jayneet', 'porwal', 'porwaljayneet97@gmail.commmm', '8955018041', 'hhjbj', 'avatar.png', 'UDAIPUR', 0),
+(12, 'huhuk', 'bjbj', 'hghgyj@Gjgjg.bjh', 'hhkhh', 'hjk', 'avatar.png', 'kjhk', 0);
 
 -- --------------------------------------------------------
 
@@ -127,13 +161,6 @@ CREATE TABLE `work_experience` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `work_experience`
---
-
-INSERT INTO `work_experience` (`experience_id`, `user_id`, `organisation`, `position`, `duration`, `description`) VALUES
-(22, 5, 'orurentals', 'web developer', '6 months', 'i creaated the website www.orurentals.com');
-
---
 -- Indexes for dumped tables
 --
 
@@ -148,6 +175,12 @@ ALTER TABLE `graduation`
 --
 ALTER TABLE `school`
   ADD PRIMARY KEY (`school_id`);
+
+--
+-- Indexes for table `searchs`
+--
+ALTER TABLE `searchs`
+  ADD PRIMARY KEY (`key_id`);
 
 --
 -- Indexes for table `skills`
@@ -175,31 +208,37 @@ ALTER TABLE `work_experience`
 -- AUTO_INCREMENT for table `graduation`
 --
 ALTER TABLE `graduation`
-  MODIFY `graduation_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `graduation_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `school`
 --
 ALTER TABLE `school`
-  MODIFY `school_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `school_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `searchs`
+--
+ALTER TABLE `searchs`
+  MODIFY `key_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `skills`
 --
 ALTER TABLE `skills`
-  MODIFY `skill_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `skill_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `work_experience`
 --
 ALTER TABLE `work_experience`
-  MODIFY `experience_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `experience_id` int(10) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
