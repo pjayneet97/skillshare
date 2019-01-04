@@ -74,7 +74,7 @@ body {
                     <span class="navbar-toggler-icon"></span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="d-sm-none d-md-block mx-auto mt-2 mt-md-0"> <form class="form-inline" >
+                <div class="d-sm-none d-md-block mx-auto mt-2 mt-md-0"> <form class="form-inline" action="index.php" >
                       <input name="key" required class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" size="80">
                       <button class="btn btn-outline-primary my-2 my-sm-0" style='color: white' type="submit"><i class="material-icons">search</i></button>
                     </form>
@@ -100,7 +100,7 @@ body {
        <div class="shadow card mt-2">
          <div class="card-body">
            <h5 class="card-title">Top Searches</h5>
-           <p class="card-text">Content</p>
+           <ul class="card-text"><?php getTopSearches(); ?></ul>
          </div>
        </div>
      </div>
