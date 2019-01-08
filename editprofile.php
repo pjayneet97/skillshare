@@ -146,7 +146,7 @@ body {
                                   </form>
                                   <hr>              
                                  <div class='row mx-auto'>
-                                     <i class='material-icons' style='color:rgb(5, 126, 116)'>account_box </i>   <span class='mx-auto font-weight-bold'>".$personal['user_fname']." ".$personal['user_fname']." </span>
+                                     <i class='material-icons' style='color:rgb(5, 126, 116)'>account_box </i>   <span class='mx-auto font-weight-bold'>".$personal['user_fname']." ".$personal['user_lname']." </span>
                                  </div><hr>
                                  <div class='row mx-auto'>
                                   <i class='material-icons' style='color:rgb(16, 16, 70)'>email </i> <span style='font-size:15px' class='mx-auto font-weight-bold'> ".$personal['user_email']." </span>

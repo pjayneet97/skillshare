@@ -84,7 +84,7 @@ body {
                          <?php echo $fname;?>
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="profile.php">View Resume</a>
+                              <a class="dropdown-item" href="profile.php?uid=<?php echo $uid; ?>">View Resume</a>
                               <a class="dropdown-item" href="editprofile.php">Edit Profile</a>
                               <a class="dropdown-item" href="logout.php">Logout</a>
                             </div>
@@ -116,7 +116,7 @@ body {
 
                         <div class="col-lg-5 col-sm-2 col-md-2">
                             <div class="btn-group">
-                                <button class="btn btn-outline-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <button class="btn btn-sm btn-outline-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                  Sort by experience
                                 </button>
                                <div class="dropdown-menu">
@@ -124,7 +124,7 @@ body {
                                    <a class="dropdown-item" href="<?php echo $href.'desc'; ?>">high to low</a>
                                </div>
                             </div>
-                            <a style="text-decoration:none" href="index.php"><button class="btn btn-outline-dark">Reset filters</button></a>
+                            <a style="text-decoration:none" href="index.php"><button class="btn btn-sm btn-outline-dark">Reset filters</button></a>
                        </div>
 
 

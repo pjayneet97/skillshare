@@ -99,7 +99,7 @@ body {
                                          </div>  
                                          <hr>              
                                           <div class='row mx-auto'>
-                                                <i class='material-icons' style='color:rgb(5, 126, 116)'>account_box </i>   <span class='mx-auto font-weight-bold'>".$personal['user_fname']." ".$personal['user_fname']." </span>
+                                                <i class='material-icons' style='color:rgb(5, 126, 116)'>account_box </i>   <span class='mx-auto font-weight-bold'>".$personal['user_fname']." ".$personal['user_lname']." </span>
                                             </div>
                                                      <hr>
                                         <div class='row mx-auto'>
@@ -160,7 +160,6 @@ body {
          <div class="card mt-2 shadow p">
               <div class="card-body">
                         <h5 class="card-title font-weight-bold">Work Experience : </h5> 
-                        <hr> <h6> <span class="font-weight-bold" > Total (in Years) : </span> <span> 3 years</span> </h6>
                         <p class="card-text ">
                         
                           <div class="row font-weight-bold mx-auto">
